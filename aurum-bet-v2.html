@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StreetFight Bet | Paris sportifs et combats</title>
+<meta name="description" content="StreetFight Bet : une démo de paris sur les sports et les combats, avec comptes, profils et soldes de démonstration.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#080807">
+<link rel="canonical" href="__SITE_ORIGIN__/">
+<link rel="icon" href="/favicon.svg?v=red-2026" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="StreetFight Bet">
+<meta property="og:title" content="StreetFight Bet | Paris sportifs et combats">
+<meta property="og:description" content="Découvre StreetFight Bet, une démo de paris sportifs et combats.">
+<meta property="og:url" content="__SITE_ORIGIN__/">
+<meta property="og:image" content="__SITE_ORIGIN__/assets/social-preview.png?v=red-2026">
+<meta property="og:image:alt" content="StreetFight Bet, paris sportifs et combats">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="StreetFight Bet | Paris sportifs et combats">
+<meta name="twitter:description" content="Découvre StreetFight Bet, une démo de paris sportifs et combats.">
+<meta name="twitter:image" content="__SITE_ORIGIN__/assets/social-preview.png?v=red-2026">
+<meta name="twitter:image:alt" content="StreetFight Bet, paris sportifs et combats">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#ff394d;--gold2:#a60f22;--txt:#f4efe2;--mut:#b7b2a2;--line:rgba(255,57,77,.28);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:radial-gradient(ellipse 72% 52% at 12% 0%,rgba(96,10,28,.27),transparent 72%),radial-gradient(ellipse 58% 46% at 96% 22%,rgba(54,8,20,.28),transparent 72%),#050505;color:var(--txt);font-family:'Sora',system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-16%;z-index:0;pointer-events:none;contain:paint;background:repeating-linear-gradient(132deg,transparent 0 128px,rgba(255,57,77,.045) 129px,transparent 131px 260px);opacity:.5;animation:backdropDrift 24s ease-in-out infinite alternate}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(112deg,transparent 36%,rgba(255,57,77,.055) 49%,transparent 62%);background-size:220% 100%;animation:lightSweep 18s linear infinite}
+@keyframes backdropDrift{0%{transform:translate3d(-1%,0,0);opacity:.42}100%{transform:translate3d(1%,-1%,0);opacity:.82}}
+@keyframes lightSweep{from{background-position:120% 0}to{background-position:-120% 0}}
+#orb{position:fixed;top:0;left:0;width:380px;height:380px;margin:-190px 0 0 -190px;border-radius:50%;background:radial-gradient(circle,rgba(255,68,88,.17) 0%,rgba(255,46,68,.1) 28%,rgba(166,15,34,.045) 48%,transparent 72%);filter:blur(18px);mix-blend-mode:screen;opacity:0;transition:opacity .2s ease;z-index:0;pointer-events:none;will-change:transform;contain:strict}
+#orb.is-visible{opacity:.9;animation:haloPulse 2.6s ease-in-out infinite alternate}
+@keyframes haloPulse{from{filter:blur(16px)}to{filter:blur(25px)}}
+#dotField{position:fixed;inset:0;z-index:0;width:100%;height:100%;pointer-events:none;contain:strict}
+.glass{position:relative;background:linear-gradient(135deg,rgba(255,255,255,.11),rgba(255,255,255,.03));border:1px solid var(--line);border-radius:20px;backdrop-filter:blur(24px) saturate(170%);-webkit-backdrop-filter:blur(24px) saturate(170%);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -1px 0 rgba(0,0,0,.4),0 12px 40px rgba(0,0,0,.5)}
+.app{position:relative;z-index:1;display:grid;grid-template-columns:200px 1fr 320px;grid-template-areas:"top top top" "side main slip";gap:16px;max-width:1400px;margin:auto;padding:16px}
+.top{grid-area:top;display:flex;align-items:center;gap:14px;padding:12px 18px}
+.logo{font-weight:800;letter-spacing:.18em;color:var(--gold)}.logo span{color:var(--txt)}
+.search{flex:1;max-width:340px;margin-left:auto;padding:11px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(0,0,0,.35);color:var(--txt);font:400 14px 'Sora';outline:none}
+.search:focus{border-color:var(--gold)}
+.bal{display:flex;align-items:center;gap:6px;padding:8px 8px 8px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(0,0,0,.4);font-weight:600;font-size:14px}
+.bal b{color:var(--gold)}
+.currency-top{max-width:84px;padding:7px 5px;border-radius:9px;border:1px solid var(--line);background:#171012;color:var(--txt);font:600 12px 'Sora';outline:none}
+.admin-launch{display:flex;align-items:center;gap:8px}
+.btn{font:600 14px 'Sora',sans-serif;color:var(--txt);cursor:pointer;padding:11px 18px;border-radius:999px;border:1px solid var(--line);background:rgba(12,12,12,.4);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25);transition:transform .24s cubic-bezier(.2,.8,.2,1),border-color .24s ease,background-color .24s ease,box-shadow .24s ease;position:relative;z-index:2}
+.btn:hover:not(:disabled){border-color:var(--gold);background-color:rgba(255,57,77,.12);transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 7px 20px rgba(255,57,77,.14)}
+.btn:active:not(:disabled){transform:translateY(0) scale(.97);box-shadow:inset 0 2px 6px rgba(0,0,0,.28)}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn:disabled{cursor:not-allowed;opacity:.55}
+.gold{background:linear-gradient(135deg,#dc2a3e,#910c1c);color:#fff;border-color:#ff6575}
+.side{grid-area:side;padding:12px;display:flex;flex-direction:column;gap:6px;position:sticky;top:16px;align-self:start}
+.side h4{font-size:11px;color:var(--mut);letter-spacing:.14em;padding:6px 8px}
+.nav{text-align:left;border-radius:14px;display:flex;gap:10px;align-items:center;background:transparent;border-color:transparent;box-shadow:none}
+.nav.on{background:rgba(255,57,77,.18);border-color:var(--gold)}
+.discord-link{color:#fff;background:#5865f2;border-color:#5865f2;box-shadow:0 4px 14px rgba(88,101,242,.24)}
+.discord-link:hover{color:#fff;background:#4752c4;border-color:#4752c4}
+.discord-link .nav-icon{fill:currentColor;stroke:none}
+.nav-icon{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+main{grid-area:main;min-width:0}
+.promos{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:22px}
+.promo{padding:20px;overflow:hidden;background:linear-gradient(135deg,rgba(255,57,77,.24),rgba(255,255,255,.03) 70%)}
+.promo big{font-size:30px;font-weight:800;color:var(--gold);display:block}
+.promo small{color:var(--mut);font-size:13px}
+.crypto-icon{display:block;width:24px;height:24px;flex:0 0 24px;overflow:visible}
+.crypto-icons{display:flex;justify-content:center;align-items:center;gap:clamp(7px,1.5vw,12px);min-height:54px;margin-bottom:8px}
+.crypto-icons .crypto-icon{width:27px;height:27px;flex:0 0 27px}
+.crypto-icons .crypto-icon *{fill:none!important;stroke:#fff;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+.crypto-icons .coin-btc>path{transform:translate(1.7px,1px) scale(.9);transform-origin:16px 16px}
+.coins .coin-btc>path{transform:translate(1.7px,1px) scale(.9);transform-origin:16px 16px}
+.crypto-chip{display:flex;align-items:center;gap:3px;color:var(--txt);font-size:9px;font-weight:700}
+.bal .btn{display:flex;align-items:center;justify-content:center;gap:7px}.bal .crypto-icon{width:21px;height:21px;flex:0 0 21px}
+.bal .coin-btc>path{transform:translate(1.25px,.45px) scale(.9);transform-origin:16px 16px}
+.coins .btn{display:flex;align-items:center;justify-content:center;gap:8px}.coins .crypto-icon{width:24px;height:24px;flex-basis:24px}
+.hd{display:flex;justify-content:space-between;align-items:center;margin:0 4px 12px}
+.hd h2{font-size:18px}.mut{color:var(--mut);font-size:13px}
+.match{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 16px;margin-bottom:10px}
+.match-main{min-width:0;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px;align-items:center}.fight-delete{width:34px;height:34px;padding:0;border:1px solid rgba(255,80,80,.45);color:#ff7777;font-size:22px;line-height:1}
+.confirm-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+.info{display:flex;flex-direction:column;gap:3px;font-size:13px;font-weight:600}
+.info small{color:var(--mut);font-weight:400;font-size:11px}
+.live{color:#ff5d5d}
+.tm{display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:15px}
+.tm div{display:flex;align-items:center;gap:10px}
+.tm i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:800 12px 'Sora';font-style:normal;color:#fff;background:linear-gradient(135deg,#e02d42,var(--gold2))}
+.odds{display:flex;gap:8px}
+.odd{display:flex;flex-direction:column;align-items:center;min-width:104px;gap:2px;border-radius:14px;font-weight:800;color:var(--gold)}
+.odd small{color:var(--mut);font-weight:400;font-size:11px;max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.odd.on{background:linear-gradient(135deg,#dc2a3e,#910c1c);color:#fff;border-color:#ff6575}
+.odd.on small{color:#fff}
+.slip{grid-area:slip;padding:18px;position:sticky;top:16px;align-self:start}
+.tabs{display:flex;gap:6px;margin-bottom:14px}.tabs .btn{flex:1;padding:9px}
+.tabs .on{border-color:var(--gold);background:rgba(255,57,77,.18)}
+.it{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;margin-bottom:8px;border-radius:14px;background:rgba(0,0,0,.35);border:1px solid var(--line);font-size:13px}
+.it small{display:block;color:var(--mut);font-size:11px}
+.x{cursor:pointer;color:var(--mut);background:none;border:0;font-size:18px;position:relative;z-index:2}
+.slip input{width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(0,0,0,.4);color:var(--txt);font:600 16px 'Sora';margin:10px 0;outline:none}
+.slip input:focus{border-color:var(--gold)}
+.row{display:flex;justify-content:space-between;font-size:14px;margin:6px 0;color:var(--mut)}.row b{color:var(--txt)}
+.msg{margin-top:12px;padding:12px;border-radius:14px;text-align:center;font-weight:600;font-size:14px;display:none}
+.win{display:block;background:rgba(80,200,120,.18);border:1px solid #50c878}
+.lose{display:block;background:rgba(255,80,80,.16);border:1px solid #ff5050}
+.up{color:#50c878;font-weight:800}.dn{color:#ff6b6b;font-weight:800}
+.modal{position:fixed;inset:0;z-index:5;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal .glass{width:min(440px,100%);padding:24px;background:rgba(12,7,9,.94)}
+.admin-modal .glass{width:min(620px,100%);max-height:calc(100dvh - 40px);overflow-y:auto;padding:24px;background:rgba(12,7,9,.96)}
+.admin-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.admin-heading h3{font-size:18px}
+.admin-section{padding-top:18px;margin-top:18px;border-top:1px solid var(--line)}
+.admin-section h4{font-size:13px;margin-bottom:12px}
+.admin-form{display:grid;gap:12px}
+.admin-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.admin-form label{display:grid;gap:6px;color:var(--mut);font-size:12px}
+.admin-form input{width:100%;min-width:0;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(0,0,0,.4);color:var(--txt);font:500 14px 'Sora';outline:none}
+.admin-form input:focus{border-color:var(--gold)}
+.fight-clock-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fight-clock{display:grid;justify-items:center;gap:8px;padding:12px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.2)}
+.fight-clock h5{width:100%;font-size:12px;color:var(--mut);font-weight:500}
+.clock-face{width:150px;height:150px;touch-action:none;cursor:crosshair}
+.clock-face circle{fill:rgba(0,0,0,.35);stroke:var(--line);stroke-width:2}
+.clock-face text{fill:var(--mut);font:7px 'Sora';text-anchor:middle;dominant-baseline:middle;pointer-events:none}
+.clock-hand{stroke:var(--gold);stroke-width:3;stroke-linecap:round;pointer-events:none}
+.clock-hand.minute{stroke-width:2}
+.clock-pin{fill:var(--gold);pointer-events:none}
+.fight-clock input{max-width:120px;text-align:center}
+.admin-form .check{display:flex;align-items:center;gap:8px}
+.admin-form .check input{width:16px;height:16px;accent-color:var(--gold)}
+.admin-notice{margin-top:14px}
+.admin-user-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.admin-user-actions .btn{padding:8px 12px}
+.account-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.account-actions .btn{display:flex;align-items:center;gap:8px;padding:9px 13px;white-space:nowrap}
+.account-avatar{width:28px;height:28px;flex:0 0 28px;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line);border-radius:50%;background:rgba(0,0,0,.4);color:var(--gold);font-size:12px;font-weight:800}
+.account-avatar img{width:100%;height:100%;object-fit:cover}
+.auth-modal .glass,.profile-modal .glass{width:min(460px,100%);max-height:calc(100dvh - 40px);overflow-y:auto;padding:24px;background:rgba(12,7,9,.96)}
+.auth-mode{display:flex;gap:8px;margin:18px 0 14px}
+.auth-mode .btn{flex:1}
+.auth-mode .on{border-color:var(--gold);background:rgba(255,57,77,.18)}
+.auth-form{display:grid;gap:12px}
+.auth-form label{display:grid;gap:6px;color:var(--mut);font-size:12px}
+.auth-form input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:rgba(0,0,0,.4);color:var(--txt);font:500 14px 'Sora';outline:none}
+.auth-form input:focus{border-color:var(--gold)}
+.auth-error{min-height:18px;margin-top:12px;color:#ff8585;font-size:12px}
+.google-auth{display:grid;justify-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--line);margin-top:16px}
+.google-auth p{color:var(--mut);font-size:12px;text-align:center}
+.profile-id{padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.35);font:12px monospace;overflow-wrap:anywhere}
+.profile-head{display:flex;align-items:center;gap:14px;margin:18px 0}
+.profile-avatar{width:64px;height:64px;flex-basis:64px;font-size:20px}
+.profile-meta{display:grid;gap:4px;min-width:0}
+.profile-meta small{color:var(--mut);overflow-wrap:anywhere}
+.spam-trap{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.cookie-banner{position:fixed;right:16px;bottom:16px;left:16px;z-index:6;display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:920px;margin-left:auto;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(12,12,10,.97);box-shadow:0 12px 40px rgba(0,0,0,.55)}
+.cookie-copy{display:grid;gap:4px;font-size:13px;line-height:1.5}.cookie-copy a{color:var(--txt);text-decoration:underline;text-underline-offset:3px}
+.cookie-actions{display:flex;flex:0 0 auto;gap:8px}.cookie-actions .btn{padding:9px 13px}
+.admin-analytics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.analytics-stat{padding:12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.3)}
+.analytics-stat b{display:block;color:var(--txt);font-size:18px}.analytics-stat small{color:var(--mut)}
+.skip-link{position:fixed;top:8px;left:8px;z-index:20;padding:10px 14px;transform:translateY(-150%);background:#fff;color:#111;border-radius:8px}
+.skip-link:focus{transform:translateY(0)}
+.footer-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px;margin-top:8px}
+.footer-links a,.footer-link{color:var(--txt);font:inherit;text-decoration:underline;text-underline-offset:3px}
+.footer-link{padding:0;border:0;background:none;cursor:pointer}
+.faq-list{display:grid;gap:10px}
+.faq-item{overflow:hidden}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:17px 20px;cursor:pointer;list-style:none;font-size:14px;font-weight:600}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';color:var(--gold);font-size:22px;font-weight:400;transition:transform .2s}
+.faq-item[open] summary::after{content:'−'}
+.faq-item p{padding:0 20px 18px;color:var(--mut);font-size:13px;line-height:1.7}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+.coins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:14px 0}.coins .btn{padding:10px 6px}
+.coins .sel{border-color:var(--gold);background:rgba(255,57,77,.2)}
+.deposit-modes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0 10px}.deposit-modes .btn{padding:10px}.deposit-modes .on{border-color:var(--gold);background:rgba(255,57,77,.2)}
+.deposit-select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#171012;color:var(--txt);font:500 14px 'Sora';margin:10px 0;outline:none}.deposit-help{color:var(--mut);font-size:11px;line-height:1.5}
+.addr{font:12px monospace;word-break:break-all;padding:12px;border-radius:12px;background:rgba(0,0,0,.45);border:1px dashed var(--line);color:var(--gold)}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:24px 0 8px}
+@media(max-width:1100px){.app{grid-template-columns:1fr 320px;grid-template-areas:"top top" "side side" "main slip"}
+ .side{position:static;flex-direction:row;overflow-x:auto}.side h4{display:none}.nav{white-space:nowrap}}
+@media(max-width:820px){.app{grid-template-columns:1fr;grid-template-areas:"top" "side" "main" "slip"}.slip{position:static}
+ .match{grid-template-columns:1fr auto}.match-main{grid-template-columns:1fr auto}.info{grid-column:1/-1;flex-direction:row;gap:10px}.odds{flex-direction:column}.odd{min-width:96px}
+ .search{display:none}.top{flex-wrap:wrap}.bal{margin-left:auto}.admin-fields{grid-template-columns:1fr}.admin-modal .glass{padding:20px}.account-actions .btn{padding:8px 10px}.auth-modal .glass,.profile-modal .glass{padding:20px}.cookie-banner{right:10px;bottom:10px;left:10px;align-items:stretch;flex-direction:column;gap:12px}.cookie-actions .btn{flex:1}.admin-analytics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#matches">Aller aux matchs</a>
+<div id="orb" aria-hidden="true"></div>
+<canvas id="dotField" aria-hidden="true"></canvas>
+<div class="app">
+  <header class="top glass">
+    <div class="logo">StreetFight<span> Bet</span></div>
+    <input class="search" id="q" aria-label="Rechercher un match ou un combattant" placeholder="Rechercher une équipe…">
+    <div class="bal"><select id="headerCurrency" class="currency-top" aria-label="Choisir la crypto du compte" onchange="setAccountCurrency(this.value)"><option value="USDT">USDT</option><option value="BTC">BTC</option><option value="ETH">ETH</option><option value="LTC">LTC</option><option value="XRP">XRP</option><option value="SOL">SOL</option></select><span id="bal"><b>0.00</b> USDT</span><button class="btn gold" onclick="openM()"><span id="btcMark" aria-hidden="true"></span>Déposer</button></div>
+    <div class="account-actions" id="guestActions"><button class="btn" onclick="openAuth('login')">Connexion</button><button class="btn gold" onclick="trackPrimaryCta();openAuth('register')">S’inscrire</button></div>
+    <div class="account-actions" id="userActions" hidden><button class="btn" onclick="openProfile()"><span class="account-avatar"><img id="headerAvatar" alt="" hidden><span id="headerInitial">?</span></span><span id="headerName"></span></button><button class="btn" onclick="logout()">Déconnexion</button></div>
+    <button class="btn admin-launch" id="adminLaunch" hidden onclick="openAdmin()"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.8-3.1 8.4-7 10-3.9-1.6-7-5.2-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>Admin</button>
+  </header>
+
+  <aside class="side glass">
+    <h4>SPORTS</h4>
+    <button class="btn nav on" data-f="all"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg> Tous</button>
+    <button class="btn nav" data-f="live"><span class="live">●</span> En direct</button>
+    <button class="btn nav" data-f="combat"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12.5V8a2.5 2.5 0 0 1 5 0v2.5V6a2.5 2.5 0 0 1 5 0v5.5l1-1.7a2 2 0 0 1 3.7 1.2l-1.4 6a5.2 5.2 0 0 1-5.1 4H11a5 5 0 0 1-5-5v-1.4a2.2 2.2 0 0 1 1-2.1Z"/><path d="M7 17h10"/></svg> Combats</button>
+    <button class="btn nav" data-page="faq"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9a2.5 2.5 0 1 1 4.4 1.6c-.9 1-2 1.2-2 2.9M12 17h.01"/></svg> FAQ</button>
+    <a class="btn nav discord-link" href="https://discord.gg/TON-LIEN-DISCORD" target="_blank" rel="noopener noreferrer" aria-label="Rejoindre le serveur Discord (modifier le lien dans aurum-bet-v2.html)"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.6764-.2762-5.4868 0-.1636-.393-.406-.8742-.6174-1.2495a.077.077 0 0 0-.0785-.0371A19.7363 19.7363 0 0 0 3.676 4.3698a.07.07 0 0 0-.0321.0272C.5334 9.0468-.319 13.5799.0992 18.0566a.0824.0824 0 0 0 .0312.0561 19.9 19.9 0 0 0 5.9938 3.0294.0777.0777 0 0 0 .0842-.0272c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0418-.1057 13.131 13.131 0 0 1-1.872-.8926.077.077 0 0 1-.0077-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0104c3.9278 1.7933 8.18 1.7933 12.0614 0a.074.074 0 0 1 .0785.0095c.1201.0991.246.198.3727.2923a.077.077 0 0 1-.0068.1277c-.5982.3503-1.2175.6497-1.8729.8917a.0766.0766 0 0 0-.0409.1066c.3606.6981.7721 1.3629 1.2251 1.9933a.076.076 0 0 0 .0842.0281 19.839 19.839 0 0 0 6.0025-3.0294.077.077 0 0 0 .0312-.0552c.5004-5.177-.8382-9.6739-3.5495-13.6598a.061.061 0 0 0-.0312-.0272ZM8.02 15.3312c-1.1835 0-2.1569-1.0869-2.1569-2.4194 0-1.3325.9545-2.4194 2.1569-2.4194 1.211 0 2.175.096 2.1569 2.4194 0 1.3325-.9545 2.4194-2.1569 2.4194Zm7.9748 0c-1.1835 0-2.1569-1.0869-2.1569-2.4194 0-1.3325.9545-2.4194 2.1569-2.4194 1.211 0 2.175.096 2.1569 2.4194 0 1.3325-.9545 2.4194-2.1569 2.4194Z"/></svg> Discord ↗</a>
+  </aside>
+
+  <main id="matches">
+    <div id="matchesContent">
+    <div class="promos">
+      <div class="glass promo"><big>x2</big><small>Cote fixe sur chaque match</small></div>
+      <div class="glass promo"><big>0</big><small>Si ton pari est perdu</small></div>
+      <div class="glass promo"><div class="crypto-icons" id="coinMarks" aria-hidden="true"></div><small>Dépôts BTC, ETH, USDT (ERC-20), XRP, LTC</small></div>
+    </div>
+    <div class="hd"><h2 id="ttl">Tous les matchs</h2><span class="mut" id="cnt"></span></div>
+    <div id="list"></div>
+    </div>
+    <section id="faqPanel" hidden aria-labelledby="faqTitle">
+      <div class="hd"><h2 id="faqTitle">Foire aux questions</h2><span class="mut">Les réponses à tes questions</span></div>
+      <div class="faq-list">
+        <details class="glass faq-item"><summary>Comment créer un compte ?</summary><p>Clique sur « S’inscrire » en haut de la page, puis renseigne les informations demandées. Une fois ton inscription terminée, tu pourras te connecter et retrouver ton profil.</p></details>
+        <details class="glass faq-item"><summary>C’est quoi une cote ?</summary><p>La cote indique le multiplicateur appliqué à ta mise si ton pari est gagnant. Par exemple, avec une cote de 2, une mise de 10 donne un gain potentiel de 20, mise comprise.</p></details>
+        <details class="glass faq-item"><summary>Comment fonctionne un pari combiné ?</summary><p>Un pari combiné regroupe plusieurs sélections dans un même pari. Il est gagnant uniquement si toutes les sélections sont correctes ; les cotes se multiplient pour calculer le gain potentiel.</p></details>
+        <details class="glass faq-item"><summary>Comment mon compte est-il protégé ?</summary><p>Choisis un mot de passe robuste et unique, garde-le confidentiel et déconnecte-toi sur un appareil partagé. Ne communique jamais ton mot de passe, même à une personne prétendant faire partie du support.</p></details>
+        <details class="glass faq-item"><summary>Comment contacter le support ?</summary><p>Le support se trouve sur Discord. Va sur le serveur Discord pour accéder au support disponible 24/7.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <aside class="glass slip">
+    <div class="tabs"><button class="btn on" id="t1" onclick="tab(1)">Ticket <span id="n">0</span></button><button class="btn" id="t2" onclick="tab(2)">Mes paris</button></div>
+    <div id="ticket">
+      <div id="items"></div>
+      <label class="deposit-help" for="stakeCurrency">Devise de la mise</label>
+      <select id="stakeCurrency" class="deposit-select" aria-label="Devise utilisée pour parier" onchange="updateStakeCurrency()"><option value="USDT">USDT</option><option value="BTC">BTC</option><option value="ETH">ETH</option><option value="LTC">LTC</option><option value="XRP">XRP</option><option value="SOL">SOL</option></select>
+      <input id="stake" type="number" min="0.00000001" step="any" inputmode="decimal" aria-label="Montant de la mise" placeholder="Mise par pari (USDT)">
+      <div class="row">Cote <b>x2.00</b></div>
+      <div class="row">Mise totale <b id="tot">0.00 USDT</b></div>
+      <div class="row">Gain potentiel <b id="pot" style="color:var(--gold)">0.00 USDT</b></div>
+      <div class="row">Si perdu <b id="lostAmount">0.00 USDT</b></div>
+      <p class="deposit-help" id="stakePreview" aria-live="polite">Équivalent indicatif : 0.00 USDT. Taux de démonstration, sans conversion réelle.</p>
+      <button class="btn gold" style="width:100%;margin-top:12px" onclick="bet()">Placer le pari</button>
+      <div id="msg" class="msg"></div>
+    </div>
+    <div id="hist" style="display:none"></div>
+  </aside>
+</div>
+<footer><div>Démo : aucun vrai paiement. Jouer comporte des risques : endettement, isolement, dépendance. 18+ uniquement.</div><div class="footer-links"><a href="/terms">Conditions d’utilisation</a><button class="footer-link" type="button" onclick="showCookiePreferences()">Préférences cookies</button></div></footer>
+
+<section class="cookie-banner" id="cookieBanner" role="dialog" aria-labelledby="cookieTitle" aria-describedby="cookieDescription" hidden>
+  <div class="cookie-copy"><strong id="cookieTitle">Respect de ta vie privée</strong><p id="cookieDescription">Les cookies de session sont nécessaires au compte. Les statistiques anonymes restent désactivées sans ton accord. <a href="/terms#cookies">En savoir plus</a></p></div>
+  <div class="cookie-actions"><button class="btn" type="button" onclick="setAnalyticsConsent(false)">Refuser</button><button class="btn gold" type="button" onclick="setAnalyticsConsent(true)">Accepter les statistiques</button></div>
+</section>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeM()">
+  <div class="glass" role="dialog" aria-modal="true" aria-labelledby="depositTitle">
+    <h3 id="depositTitle">Dépôt</h3>
+    <div class="deposit-modes" role="group" aria-label="Type de dépôt"><button class="btn on" id="cryptoMode" type="button" onclick="setDepositMode('crypto')">Cryptomonnaie</button><button class="btn" id="fiatMode" type="button" onclick="setDepositMode('fiat')">Monnaie fiat</button></div>
+    <div id="cryptoDeposit"><p class="deposit-help">Choisis la cryptomonnaie à utiliser pour ton dépôt. Vérifie le réseau avant tout transfert.</p><div class="coins" id="coins"></div><div class="addr" id="addr"></div>
+      <input id="dep" type="number" min="0.00000001" step="any" placeholder="Montant en crypto" aria-label="Montant du dépôt en cryptomonnaie" style="width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(0,0,0,.4);color:var(--txt);font:600 16px 'Sora';margin:14px 0;outline:none"></div>
+    <div id="fiatDeposit" hidden><p class="deposit-help">Choisis la devise dans laquelle tu souhaites déposer.</p>
+      <select id="fiatCurrency" class="deposit-select" aria-label="Devise fiat" onchange="updateFiatPreview()"></select>
+      <input id="fiatAmount" type="number" min="0.01" step="0.01" placeholder="Montant en EUR" aria-label="Montant du dépôt en monnaie fiat" oninput="updateFiatPreview()" style="width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(0,0,0,.4);color:var(--txt);font:600 16px 'Sora';margin:4px 0 10px;outline:none">
+      <p class="deposit-help" id="fiatPreview" aria-live="polite">Montant indicatif en USDT : 0.00 USDT. Taux de démonstration, sans conversion réelle.</p></div>
+    <div id="depositNotice" class="auth-error" aria-live="polite"></div>
+    <div style="display:flex;gap:10px"><button class="btn" style="flex:1" onclick="closeM()">Fermer</button><button class="btn gold" style="flex:1" onclick="deposit()">Demander ce crédit démo</button></div>
+    <p class="deposit-help" style="margin-top:12px">Ces adresses peuvent recevoir des transferts réels. Le site ne détecte ni ne crédite automatiquement les transactions : le bouton ci-dessus ajoute uniquement un solde de démonstration. Vérifie soigneusement la crypto et le réseau avant tout envoi.</p>
+  </div>
+</div>
+<div class="modal admin-modal" id="adminModal" onclick="if(event.target===this)closeAdmin()">
+  <div class="glass" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+    <div class="admin-heading"><h3 id="adminTitle">Administration</h3><button class="x" type="button" aria-label="Fermer" onclick="closeAdmin()">×</button></div>
+    <section class="admin-section" aria-labelledby="analyticsTitle">
+      <h4 id="analyticsTitle">Audience consentie <span id="analyticsPeriod" class="mut"></span></h4>
+      <div class="admin-analytics">
+        <div class="analytics-stat"><b id="analyticsViews">0</b><small>Pages vues</small></div>
+        <div class="analytics-stat"><b id="analyticsSignup">0</b><small>Clics inscription</small></div>
+        <div class="analytics-stat"><b id="analyticsAccounts">0</b><small>Comptes</small></div>
+        <div class="analytics-stat"><b id="analyticsFights">0</b><small>Combats</small></div>
+      </div>
+      <button class="btn" id="refreshAnalytics" type="button" style="margin-top:10px">Actualiser</button>
+    </section>
+    <section class="admin-section">
+      <h4>Créditer un compte par ID</h4>
+      <form class="admin-form" id="adminCreditForm">
+        <label>ID unique du compte<input id="adminCreditUserId" placeholder="SFB-…" required></label>
+        <label>Cryptomonnaie<select id="adminCreditCurrency" class="deposit-select" aria-label="Crypto du crédit administrateur" onchange="updateAdminCreditPreview()"><option value="USDT">USDT</option><option value="BTC">BTC</option><option value="ETH">ETH</option><option value="LTC">LTC</option><option value="XRP">XRP</option><option value="SOL">SOL</option></select></label>
+        <label>Montant en <span id="adminCreditUnit">USDT</span><input id="adminCredit" type="number" min="0.00000001" step="any" placeholder="Ex. 100" oninput="updateAdminCreditPreview()" required></label>
+        <p class="deposit-help" id="adminCreditPreview" aria-live="polite">Crédit indicatif : 0.00 USDT. Taux de démonstration.</p>
+        <button class="btn gold" type="submit">Créditer le solde</button>
+      </form>
+    </section>
+    <section class="admin-section">
+      <h4>Gérer les droits d’un compte</h4>
+      <form class="admin-form" id="adminLookupForm">
+        <label>Rechercher un compte par ID<input id="adminLookupId" placeholder="SFB-…" required></label>
+        <button class="btn" type="submit">Rechercher</button>
+      </form>
+      <div class="it" id="adminUserSummary" hidden><div id="adminUserDetails"></div><div class="admin-user-actions"><button class="btn" id="adminRoleAction" type="button"></button></div></div>
+    </section>
+    <section class="admin-section">
+      <h4>Ajouter un combat</h4>
+      <form class="admin-form" id="adminFightForm">
+        <div class="admin-fields">
+            <label>Compétition<input id="fightLeague" maxlength="60" placeholder="Ex. UFC · poids léger" required></label>
+            <label>Date du combat<input id="fightDate" type="date" required></label>
+            <label>Combattant 1<input id="fighterA" minlength="2" maxlength="50" required></label>
+            <label>Combattant 2<input id="fighterB" minlength="2" maxlength="50" required></label>
+        </div>
+        <div class="fight-clock-row">
+          <div class="fight-clock"><h5>Début · faites glisser les aiguilles</h5><svg class="clock-face" data-clock="fightStart" viewBox="0 0 120 120" role="slider" aria-label="Heure de début du combat" tabindex="0"><circle cx="60" cy="60" r="54"/><g class="clock-labels"></g><line class="clock-hand hour" x1="60" y1="60" x2="60" y2="32"/><line class="clock-hand minute" x1="60" y1="60" x2="60" y2="18"/><circle class="clock-pin" cx="60" cy="60" r="3"/></svg><input id="fightStart" type="time" value="20:00" required aria-label="Heure de début"></div>
+          <div class="fight-clock"><h5>Fin · faites glisser les aiguilles</h5><svg class="clock-face" data-clock="fightEnd" viewBox="0 0 120 120" role="slider" aria-label="Heure de fin du combat" tabindex="0"><circle cx="60" cy="60" r="54"/><g class="clock-labels"></g><line class="clock-hand hour" x1="60" y1="60" x2="60" y2="32"/><line class="clock-hand minute" x1="60" y1="60" x2="60" y2="18"/><circle class="clock-pin" cx="60" cy="60" r="3"/></svg><input id="fightEnd" type="time" value="21:00" required aria-label="Heure de fin"></div>
+        </div>
+        <label class="check"><input id="fightLive" type="checkbox"> Combat en direct</label>
+        <button class="btn gold" type="submit">Publier le combat</button>
+      </form>
+    </section>
+    <section class="admin-section">
+      <h4>Saisir les résultats</h4>
+      <div id="adminFightResults" class="admin-form"><p class="deposit-help">Chargement des combats…</p></div>
+    </section>
+    <div class="msg admin-notice" id="adminNotice" aria-live="polite"></div>
+  </div>
+</div>
+
+<div class="modal" id="deleteFightModal" onclick="if(event.target===this)closeFightDeletion()">
+  <div class="glass" role="dialog" aria-modal="true" aria-labelledby="deleteFightTitle"><h3 id="deleteFightTitle">Êtes-vous sûr de vouloir supprimer le combat ?</h3><p class="mut" id="deleteFightDescription"></p><div class="confirm-actions"><button class="btn" type="button" onclick="closeFightDeletion()">Non</button><button class="btn gold" id="confirmFightDelete" type="button">Oui</button></div><p class="msg" id="deleteFightNotice" aria-live="polite"></p></div>
+</div>
+
+<div class="modal auth-modal" id="authModal" onclick="if(event.target===this)closeAuth()">
+  <div class="glass" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="admin-heading"><h3 id="authTitle">Connexion</h3><button class="x" type="button" aria-label="Fermer" onclick="closeAuth()">×</button></div>
+    <div class="auth-mode" id="authModeTabs"><button class="btn on" id="loginMode" type="button" onclick="setAuthMode('login')">Connexion</button><button class="btn" id="registerMode" type="button" onclick="setAuthMode('register')">Inscription</button></div>
+    <form class="auth-form" id="loginForm">
+      <label>Adresse courriel<input id="loginEmail" type="email" autocomplete="email" required></label>
+      <label>Mot de passe<input id="loginPassword" type="password" autocomplete="current-password" minlength="10" required></label>
+      <button class="btn gold" type="submit">Se connecter</button>
+    </form>
+    <form class="auth-form" id="registerForm" hidden>
+      <label class="spam-trap" aria-hidden="true">Ne pas remplir<input id="registerWebsite" name="website" tabindex="-1" autocomplete="off"></label>
+      <label>Nom affiché<input id="registerName" autocomplete="name" minlength="2" maxlength="32" required></label>
+      <label>Adresse courriel<input id="registerEmail" type="email" autocomplete="email" required></label>
+      <label>Mot de passe (10 caractères minimum)<input id="registerPassword" type="password" autocomplete="new-password" minlength="10" required></label>
+      <button class="btn gold" type="submit">Créer mon compte</button>
+    </form>
+    <form class="auth-form" id="emailVerificationForm" hidden>
+      <p id="verificationMessage" class="mut"></p>
+      <label>Code de vérification à 6 chiffres<input id="emailVerificationCode" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" maxlength="6" required></label>
+      <button class="btn gold" type="submit">Vérifier mon adresse e-mail</button>
+      <button class="btn" id="resendEmailCode" type="button">Renvoyer le code</button>
+    </form>
+    <div class="google-auth"><p>Ou continuer avec Google</p><div id="googleButton"></div><p id="googleMessage">Chargement de la connexion Google…</p></div>
+    <p class="auth-error" id="authError" aria-live="polite"></p>
+  </div>
+</div>
+
+<div class="modal profile-modal" id="profileModal" onclick="if(event.target===this)closeProfile()">
+  <div class="glass" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+    <div class="admin-heading"><h3 id="profileTitle">Mon profil</h3><button class="x" type="button" aria-label="Fermer" onclick="closeProfile()">×</button></div>
+    <div class="profile-head"><span class="account-avatar profile-avatar"><img id="profileAvatar" alt="Photo de profil" hidden><span id="profileInitial">?</span></span><div class="profile-meta"><b id="profileDisplayName"></b><small id="profileEmail"></small><small id="profileRole"></small></div></div>
+    <p class="mut" style="margin-bottom:6px">ID unique du compte</p><div class="profile-id" id="profileId"></div>
+    <form class="auth-form" id="profileNameForm" style="margin-top:16px"><label>Nom affiché<input id="profileNameInput" minlength="2" maxlength="32" required></label><button class="btn" type="submit">Modifier le nom</button></form>
+    <form class="auth-form" id="profileAvatarForm" style="margin-top:14px"><label>Photo de profil (JPG, PNG ou WebP, 2 Mo max.)<input id="profileAvatarInput" type="file" accept="image/png,image/jpeg,image/webp" required></label><button class="btn" type="submit">Modifier la photo</button></form>
+    <p class="auth-error" id="profileError" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<script>
+const orb=document.getElementById('orb'),dotField=document.getElementById('dotField'),dotContext=dotField.getContext('2d',{alpha:true});
+let fieldWidth=0,fieldHeight=0,pointerFrameId=0,dotFrameId=0,dots=[];
+const gridSpacing=36,pointerState={x:-1000,y:-1000,active:false};
+function drawDotField(){dotContext.clearRect(0,0,fieldWidth,fieldHeight);let settling=false;for(const dot of dots){let targetX=0,targetY=0,proximity=0;if(pointerState.active){const distanceX=dot.baseX-pointerState.x,distanceY=dot.baseY-pointerState.y,distance=Math.hypot(distanceX,distanceY),radius=170;if(distance<radius&&distance>.01){proximity=1-distance/radius;const force=proximity*proximity*18;targetX=distanceX/distance*force;targetY=distanceY/distance*force}}dot.offsetX+=(targetX-dot.offsetX)*.22;dot.offsetY+=(targetY-dot.offsetY)*.22;if(Math.abs(targetX-dot.offsetX)>.12||Math.abs(targetY-dot.offsetY)>.12)settling=true;dotContext.beginPath();dotContext.fillStyle=`rgba(255,71,87,${dot.opacity+proximity*.42})`;dotContext.arc(dot.baseX+dot.offsetX,dot.baseY+dot.offsetY,dot.radius+proximity*.42,0,Math.PI*2);dotContext.fill()}if(settling){dotFrameId=requestAnimationFrame(drawDotField)}else{dotFrameId=0}}
+function resizeDotField(){if(dotFrameId)cancelAnimationFrame(dotFrameId);dotFrameId=0;const pixelRatio=Math.min(devicePixelRatio||1,2);fieldWidth=innerWidth;fieldHeight=innerHeight;dotField.width=Math.round(fieldWidth*pixelRatio);dotField.height=Math.round(fieldHeight*pixelRatio);dotContext.setTransform(pixelRatio,0,0,pixelRatio,0,0);dots=[];for(let pointY=gridSpacing/2;pointY<fieldHeight+gridSpacing;pointY+=gridSpacing){for(let pointX=gridSpacing/2;pointX<fieldWidth+gridSpacing;pointX+=gridSpacing){dots.push({baseX:pointX,baseY:pointY,offsetX:0,offsetY:0,radius:1+Math.random()*.35,opacity:.17+Math.random()*.07})}}drawDotField()}
+resizeDotField();addEventListener('resize',resizeDotField,{passive:true});
+if(matchMedia('(hover: hover) and (pointer: fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){let targetX=innerWidth/2,targetY=innerHeight/2,x=targetX,y=targetY;function followPointer(){x+=(targetX-x)*.18;y+=(targetY-y)*.18;orb.style.transform=`translate3d(${x}px,${y}px,0)`;if(Math.abs(targetX-x)>.35||Math.abs(targetY-y)>.35){pointerFrameId=requestAnimationFrame(followPointer)}else{pointerFrameId=0}}addEventListener('pointermove',event=>{targetX=event.clientX;targetY=event.clientY;pointerState.x=event.clientX;pointerState.y=event.clientY;pointerState.active=true;orb.classList.add('is-visible');if(!pointerFrameId)pointerFrameId=requestAnimationFrame(followPointer);if(!dotFrameId)dotFrameId=requestAnimationFrame(drawDotField)},{passive:true});document.documentElement.addEventListener('pointerleave',()=>{orb.classList.remove('is-visible');pointerState.active=false;if(!pointerFrameId)pointerFrameId=requestAnimationFrame(followPointer);if(!dotFrameId)dotFrameId=requestAnimationFrame(drawDotField)})}
+
+const M=[];
+const $=id=>document.getElementById(id),fmt=n=>n.toFixed(2)+' USDT';
+function escapeHTML(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+const N={all:'Tous les matchs',live:'En direct',combat:'Combats'};
+let bal=0,f='all',q='',slip={},hist=[],coin='USDT';
+let accountCurrency=localStorage.getItem('accountCurrency')||'USDT';
+let bettingOpen=false;
+
+function list(){
+ const L=M.map((m,i)=>({...m,i})).filter(m=>(f=='all'||(f=='live'?m.live:m.s==f))&&(m.a+m.b).toLowerCase().includes(q));
+ $('ttl').textContent=N[f];$('cnt').textContent=L.length+' match(s)';
+ $('list').innerHTML=L.map(m=>`<div class="glass match"><div class="match-main"><div class="info"><span class="${m.live?'live':''}">${m.live?'● ':''}${escapeHTML(m.t)}</span><small>${escapeHTML(m.lg)}${m.resultWinner!==null&&m.resultWinner!==undefined?` · Résultat : ${escapeHTML(m.resultWinner===0?m.a:m.b)}`:''}</small></div>
+ <div class="tm">${[m.a,m.b].map(n=>`<div><i>${escapeHTML(n[0])}</i>${escapeHTML(n)}</div>`).join('')}</div>
+ <div class="odds">${[0,1].map(k=>`<button class="btn odd ${slip[m.i]===k?'on':''}" ${!bettingOpen||m.resultWinner!==null&&m.resultWinner!==undefined?'disabled':''} onclick="tog(${m.i},${k})"><small>${escapeHTML(k?m.b:m.a)}</small>x2.00</button>`).join('')}</div></div>${m.s==='combat'&&typeof currentUser!=='undefined'&&currentUser?.role==='admin'?`<button class="btn fight-delete" type="button" aria-label="Supprimer le combat ${escapeHTML(m.a)} contre ${escapeHTML(m.b)}" onclick="confirmFightDeletion('${escapeHTML(m.id)}')">×</button>`:''}</div>`).join('')||'<p class="mut">Aucun match trouvé.</p>';
+}
+function tog(i,k){slip[i]===k?delete slip[i]:slip[i]=k;$('msg').className='msg';list();ticket()}
+function ticket(){
+ const ids=Object.keys(slip),s=+$('stake').value||0,currency=$('stakeCurrency')?.value||'USDT',unit=stakeUnit(currency),amount=stakeToUsdt(s,currency);
+ $('n').textContent=ids.length;
+ $('items').innerHTML=ids.length?ids.map(i=>`<div class="it"><div>${escapeHTML(slip[i]?M[i].b:M[i].a)}<small>${escapeHTML(M[i].a)} vs ${escapeHTML(M[i].b)}</small></div><div><b style="color:var(--gold)">x2.00</b> <button class="x" onclick="tog(${i},${slip[i]})">×</button></div></div>`).join(''):'<p class="mut" style="margin-bottom:6px">Clique sur une cote pour ajouter un pari.</p>';
+ $('tot').textContent=displayStake(s*ids.length,currency);$('pot').textContent=displayStake(s*ids.length*2,currency);$('lostAmount').textContent=displayStake(0,currency);
+ $('stakePreview').textContent=`Équivalent indicatif : ${fmt(amount)} par pari. Taux de démonstration, sans conversion réelle.`;
+ const shownBalance=bal/(cryptoToUsdt?.[accountCurrency]||1),digits=['BTC','ETH','LTC'].includes(accountCurrency)?8:2;
+ $('bal').innerHTML=`<b>${shownBalance.toFixed(digits)}</b> ${accountCurrency}`;
+}
+function bet(){const m=$('msg');m.className='msg lose';m.textContent=bettingOpen?'Connecte-toi pour enregistrer ton pari.':'Les paris sont fermés pour le moment.'}
+function histo(){$('hist').innerHTML=hist.length?hist.map(h=>`<div class="it"><div>${escapeHTML(h.n)}<small>${escapeHTML(h.vs)} · mise ${displayStake(h.s,h.currency||'USDT')}</small></div><span class="${h.pending?'':h.win?'up':'dn'}">${h.pending?'En attente du résultat':h.win?'+'+displayStake(h.s*2,h.currency||'USDT'):'0.00 '+(h.currency||'USDT')}</span></div>`).join(''):'<p class="mut">Aucun pari pour l\'instant.</p>'}
+function tab(k){$('ticket').style.display=k==1?'block':'none';$('hist').style.display=k==2?'block':'none';$('t1').classList.toggle('on',k==1);$('t2').classList.toggle('on',k==2)}
+document.querySelectorAll('.nav[data-f],.nav[data-page]').forEach(b=>b.onclick=()=>{const faq=b.dataset.page==='faq';document.querySelectorAll('.nav[data-f],.nav[data-page]').forEach(n=>n.classList.toggle('on',n===b));$('matchesContent').hidden=faq;$('faqPanel').hidden=!faq;if(!faq){f=b.dataset.f;list()}});
+$('q').oninput=e=>{q=e.target.value.toLowerCase();list()};
+$('stake').oninput=ticket;
+function stakeUnit(currency){return currency}
+function stakeToUsdt(amount,currency=$('stakeCurrency').value){return amount*(cryptoToUsdt?.[currency]??fiatToUsdt?.[currency]??1)}
+function displayStake(amount,currency=$('stakeCurrency').value){const digits=['BTC','ETH','SOL'].includes(currency)?8:2;return `${amount.toFixed(digits)} ${stakeUnit(currency)}`}
+function updateStakeCurrency(){const c=$('stakeCurrency').value;$('headerCurrency').value=['EUR','USD','GBP','CAD'].includes(c)?'USDT':c;updateStakeInput(c);ticket()}
+function updateStakeInput(c){$('stake').placeholder=`Mise par pari (${stakeUnit(c)})`;$('stake').setAttribute('aria-label',`Mise par pari en ${stakeUnit(c)}`)}
+function setAccountCurrency(currency){accountCurrency=currency;localStorage.setItem('accountCurrency',currency);$('stakeCurrency').value=currency;updateStakeInput(currency);ticket()}
+
+const C={BTC:'bc1qmqf0f70h0gcek9zvhy5d3utd4u668vgyzzkady',ETH:'0xB59F466C972Ab4feaeb9D1089385a610c564F751',USDT:'0xB59F466C972Ab4feaeb9D1089385a610c564F751',XRP:'',LTC:'LRo9k7dMMw5jozQo9FuLrufnT3y8Gh4Xp3'};
+const COIN_LOGOS={
+ BTC:'<circle cx="16" cy="16" r="15" fill="#f7931a"/><path fill="#fff" d="M21.1 13.3c.3-2.1-1.3-3.2-3.5-4l.7-2.8-1.7-.4-.7 2.7-1.4-.3.7-2.7-1.7-.4-.7 2.8-3.4-.8-.5 1.8 1.3.3c.7.2.8.6.7 1l-1.8 7.2c-.1.3-.4.5-.9.4l-1.3-.3-.8 1.9 3.4.8-.7 2.8 1.7.4.7-2.7 1.4.3-.7 2.7 1.7.4.7-2.8c2.9.5 5-.1 5.7-2.7.6-2.1-.1-3.3-1.7-4.1 1.2-.3 2-1.1 2.3-2.5Zm-3.7 5.2c-.4 1.7-3.1.9-4 .7l.7-3.2c.9.2 3.7.7 3.3 2.5Zm.4-5.2c-.4 1.6-2.6.8-3.4.6l.7-2.9c.8.2 3.1.6 2.7 2.3Z"/>',
+ ETH:'<path fill="#8a92b2" d="m16 1-9 15 9-4.1L25 16z"/><path fill="#62688f" d="m16 1-9 15 9-4.1z"/><path fill="#454a75" d="m16 18-9-5 9 16 9-16z"/><path fill="#8a92b2" d="m16 18 9-5-9 16z"/>',
+ USDT:'<circle cx="16" cy="16" r="15" fill="#26a17b"/><path fill="#fff" d="M7 8h18v3.2h-6.9v2c4.1.2 7.2 1 7.2 2s-3.1 1.8-7.2 2v6.1h-4.2v-6.1c-4.1-.2-7.2-1-7.2-2s3.1-1.8 7.2-2v-2H7V8Zm9 6.9c-4.7 0-8.5.7-8.5 1.5s3.8 1.5 8.5 1.5 8.5-.7 8.5-1.5-3.8-1.5-8.5-1.5Z"/>',
+XRP:'<g transform="rotate(90 16 16)"><path fill="#23292f" d="M6.2 4h4.1l5.7 5.8L21.7 4h4.1l-7.8 7.8a2.8 2.8 0 0 1-4 0L6.2 4Zm0 24h4.1l5.7-5.8 5.7 5.8h4.1L18 20.2a2.8 2.8 0 0 0-4 0L6.2 28Z"/></g>',
+ LTC:'<circle cx="16" cy="16" r="15" fill="#345d9d"/><path fill="#fff" d="m18.2 7.2-2.1 8.1 2.5-1.1-.7 2.7-2.5 1.1-.9 3.5h8.1l-.8 3.1H9.4l1.4-5.6-2.2 1 .7-2.7 2.2-1 2.3-9.1h4.4Z"/>'
+};
+function coinIcon(c){return `<svg class="crypto-icon coin-${c.toLowerCase()}" viewBox="0 0 32 32" aria-hidden="true" focusable="false">${COIN_LOGOS[c]}</svg>`}
+function renderCoinMarks(){$('btcMark').innerHTML=coinIcon('BTC');$('coinMarks').innerHTML=['BTC','LTC','XRP','USDT'].map(coinIcon).join('')}
+function coinUI(){$('coins').innerHTML=Object.keys(C).map(c=>`<button class="btn ${c==coin?'sel':''}" onclick="coin='${c}';coinUI()">${coinIcon(c)}<span>${c}</span></button>`).join('');$('addr').textContent=coin==='XRP'?'Adresse XRP non configurée. Aucun transfert XRP ne doit être envoyé ici.':coin==='BTC'?`Adresse Bitcoin (BTC) : ${C[coin]}`:coin==='LTC'?`Adresse Litecoin (LTC) : ${C[coin]}`:`Adresse ${coin} (Ethereum / ERC-20) : ${C[coin]}`;updateCryptoInput()}
+const cryptoToUsdt={BTC:65000,ETH:3500,USDT:1,XRP:0.5,LTC:80,SOL:150},fiatToUsdt={EUR:1.08,USD:1,GBP:1.27,CAD:.74};let depositMode='crypto';
+function updateAdminCreditPreview(){const currency=$('adminCreditCurrency')?.value||'USDT',amount=+$('adminCredit')?.value||0;$('adminCreditUnit').textContent=currency;$('adminCreditPreview').textContent=`Crédit indicatif : ${(amount*(cryptoToUsdt[currency]||1)).toFixed(2)} USDT (taux de démonstration).`;}
+function updateCryptoInput(){$('dep').placeholder=`Montant en ${coin}`;$('dep').setAttribute('aria-label',`Montant du dépôt en ${coin}`)}
+function setDepositMode(mode){depositMode=mode;$('cryptoDeposit').hidden=mode!=='crypto';$('fiatDeposit').hidden=mode!=='fiat';$('cryptoMode').classList.toggle('on',mode==='crypto');$('fiatMode').classList.toggle('on',mode==='fiat');$('depositNotice').textContent='';updateFiatPreview()}
+function updateFiatPreview(){const currency=$('fiatCurrency').value,amount=+$('fiatAmount').value||0;$('fiatAmount').placeholder=`Montant en ${currency}`;$('fiatPreview').textContent=`Montant indicatif en USDT : ${(amount*fiatToUsdt[currency]).toFixed(2)} USDT. Taux de démonstration, sans conversion réelle.`}
+function openM(){coin=accountCurrency;coinUI();setDepositMode('crypto');$('dep').value='';$('fiatAmount').value='';$('modal').classList.add('open')}
+function closeM(){$('modal').classList.remove('open')}
+function deposit(){const notice=$('depositNotice');notice.textContent='';let credit=0;if(depositMode==='crypto'){const amount=+$('dep').value;if(!(amount>0)){notice.textContent='Saisis un montant valide.';return}credit=amount*cryptoToUsdt[coin]}else{const amount=+$('fiatAmount').value;if(!(amount>0)){notice.textContent='Saisis un montant valide.';return}credit=amount*fiatToUsdt[$('fiatCurrency').value]}bal+=credit;$('dep').value='';$('fiatAmount').value='';ticket();closeM()}
+if(!['USDT','BTC','ETH','LTC','XRP','SOL'].includes(accountCurrency))accountCurrency='USDT';$('headerCurrency').value=accountCurrency;$('stakeCurrency').value=accountCurrency;updateStakeInput(accountCurrency);renderCoinMarks();list();ticket();histo();
+</script>
+<script src="/assets/auth-client.js?v=manual-results-clock-20261003" defer></script>
+</body>
+</html>
